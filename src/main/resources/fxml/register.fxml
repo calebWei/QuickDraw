@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="422.0" prefWidth="634.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.WindowRegisterController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d0fe" height="70.0" opacity="0.95" stroke="#f0abfc" strokeType="INSIDE" strokeWidth="0.0" width="634.0" />
+      <Label alignment="CENTER" layoutX="3.0" layoutY="4.0" prefHeight="70.0" prefWidth="627.0" text="Create New Account" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="50.0" arcWidth="40.0" fill="#64748b" height="42.0" layoutX="181.0" layoutY="80.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey" width="272.0" />
+      <Label alignment="CENTER" layoutX="186.0" layoutY="88.0" prefHeight="23.0" prefWidth="264.0" stylesheets="@../css/theme.css" text="Enter a new Username!" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#64748b" height="42.0" layoutX="181.0" layoutY="190.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey" width="272.0" />
+      <Label alignment="CENTER" layoutX="187.0" layoutY="198.0" prefHeight="23.0" prefWidth="264.0" stylesheets="@../css/theme.css" text="Choose your Avatar!" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameInput" alignment="CENTER" layoutX="96.0" layoutY="134.0" prefHeight="42.0" prefWidth="443.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Rectangle fx:id="register" arcHeight="40.0" arcWidth="40.0" fill="#7e22ce" height="42.0" layoutX="81.0" layoutY="349.0" onMouseClicked="#onSwitchProfileSelect" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="203.0" />
+      <Label alignment="CENTER" layoutX="86.0" layoutY="357.0" mouseTransparent="true" prefHeight="23.0" prefWidth="193.0" stylesheets="@../css/theme.css" text="Register" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="mainMenu" arcHeight="40.0" arcWidth="40.0" fill="#7e22ce" height="42.0" layoutX="352.0" layoutY="350.0" onMouseClicked="#onSwitchMainMenu" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="203.0" />
+      <Label alignment="CENTER" layoutX="356.0" layoutY="358.0" mouseTransparent="true" prefHeight="23.0" prefWidth="193.0" stylesheets="@../css/theme.css" text="Main Menu" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Circle fx:id="highlight1" fill="DODGERBLUE" layoutX="63.0" layoutY="292.0" mouseTransparent="true" opacity="0.9" radius="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" />
+      <Circle fx:id="highlight2" fill="DODGERBLUE" layoutX="164.0" layoutY="292.0" mouseTransparent="true" opacity="0.9" radius="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" />
+      <Circle fx:id="highlight3" fill="DODGERBLUE" layoutX="266.0" layoutY="292.0" mouseTransparent="true" opacity="0.9" radius="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" />
+      <Circle fx:id="highlight4" fill="DODGERBLUE" layoutX="367.0" layoutY="292.0" mouseTransparent="true" opacity="0.9" radius="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" />
+      <Circle fx:id="highlight5" fill="DODGERBLUE" layoutX="469.0" layoutY="292.0" mouseTransparent="true" opacity="0.9" radius="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" />
+      <Circle fx:id="highlight6" fill="DODGERBLUE" layoutX="570.0" layoutY="292.0" mouseTransparent="true" opacity="0.9" radius="53.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" />
+      <ImageView fx:id="icon1" fitHeight="120.0" fitWidth="120.0" layoutX="3.0" layoutY="232.0" onMouseClicked="#onSelectIconOne" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="icon2" fitHeight="120.0" fitWidth="120.0" layoutX="104.0" layoutY="232.0" onMouseClicked="#onSelectIconTwo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="icon3" fitHeight="120.0" fitWidth="120.0" layoutX="206.0" layoutY="232.0" onMouseClicked="#onSelectIconThree" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="icon4" fitHeight="120.0" fitWidth="120.0" layoutX="307.0" layoutY="232.0" onMouseClicked="#onSelectIconFour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="icon5" fitHeight="120.0" fitWidth="120.0" layoutX="409.0" layoutY="232.0" onMouseClicked="#onSelectIconFive" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="icon6" fitHeight="120.0" fitWidth="120.0" layoutX="510.0" layoutY="232.0" onMouseClicked="#onSelectIconSix" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user6.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="3.0" layoutY="400.0" prefHeight="17.0" prefWidth="627.0" textFill="RED" />
+   </children>
+</AnchorPane>

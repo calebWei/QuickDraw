@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="422.0" prefWidth="634.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.WindowSettingController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d0fe" height="70.0" opacity="0.95" stroke="#f0abfc" strokeType="INSIDE" strokeWidth="0.0" width="634.0" />
+      <Label fx:id="startLabel" alignment="CENTER" layoutX="-1.0" layoutY="4.0" prefHeight="70.0" prefWidth="634.0" text="Settings" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="resetModeButton" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="56.0" layoutX="193.0" layoutY="110.0" onMouseClicked="#onSwitchDifficulty" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="250.0" />
+      <Label alignment="CENTER" layoutX="193.0" layoutY="125.0" mouseTransparent="true" prefHeight="23.0" prefWidth="250.0" text="Change Difficulty" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="resetWordButton" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="56.0" layoutX="195.0" layoutY="190.0" onMouseClicked="#onClearHistory" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="250.0" />
+      <Label alignment="CENTER" layoutX="195.0" layoutY="205.0" mouseTransparent="true" prefHeight="23.0" prefWidth="250.0" text="Reset Words Played" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="returnButton" arcHeight="40.0" arcWidth="40.0" fill="#7e22ce" height="34.0" layoutX="232.0" layoutY="375.0" onMouseClicked="#onSwitchStart" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+      <Label alignment="CENTER" layoutX="232.0" layoutY="375.0" mouseTransparent="true" onMouseClicked="#onSwitchMainMenu" prefHeight="34.0" prefWidth="169.0" text="Return" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="deleteAccountButton" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="56.0" layoutX="195.0" layoutY="269.0" onMouseClicked="#onDeleteAccount" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="250.0" />
+      <Label alignment="CENTER" layoutX="196.0" layoutY="284.0" mouseTransparent="true" prefHeight="23.0" prefWidth="250.0" text="Delete Account" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.HiddenCanvasController">
+    <children>
+        <Rectangle fill="#f5d0fe" height="70.0" opacity="0.95" stroke="#f0abfc" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
+        <Label alignment="CENTER" prefHeight="70.0" prefWidth="1000.0" text="Quick Draw: Hidden" textFill="WHITE">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+        <Rectangle fx:id="menuButton" arcHeight="30.0" arcWidth="30.0" fill="#7e22ce" height="34.0" layoutX="427.0" layoutY="558.0" onMouseClicked="#onSwitchModeSelect" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+        <Label alignment="CENTER" layoutX="427.0" layoutY="558.0" mouseTransparent="true" prefHeight="34.0" prefWidth="169.0" text="Return" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#e1e8f0" height="477.0" layoutX="5.0" layoutY="76.0" opacity="0.95" stroke="BLACK" strokeType="INSIDE" width="990.0" />
+        <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#cbd5e1" height="267.0" layoutX="786.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+        <Label alignment="CENTER" layoutX="787.0" layoutY="147.0" prefHeight="25.0" prefWidth="200.0" text="Current Guesses" underline="true">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Rectangle fx:id="startButton" arcHeight="30.0" arcWidth="30.0" fill="#7e22ce" height="34.0" layoutX="14.0" layoutY="558.0" onMouseClicked="#onStart" onMousePressed="#playStart" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+        <Label fx:id="startLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="558.0" mouseTransparent="true" prefHeight="34.0" prefWidth="169.0" text="Start" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Rectangle fx:id="saveButton" arcHeight="30.0" arcWidth="30.0" fill="#7e22ce" height="34.0" layoutX="817.0" layoutY="558.0" onMouseClicked="#onSave" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+        <Label alignment="CENTER" layoutX="817.0" layoutY="558.0" mouseTransparent="true" prefHeight="34.0" prefWidth="169.0" text="Save Drawing" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="drawButton" fitHeight="43.0" fitWidth="38.0" layoutX="816.0" layoutY="86.0" onMouseClicked="#onErase" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/icons/pencil.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="eraseButton" fitHeight="38.0" fitWidth="38.0" layoutX="867.0" layoutY="86.0" onMouseClicked="#onErase" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/icons/eraser.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="clearButton" fitHeight="38.0" fitWidth="38.0" layoutX="918.0" layoutY="86.0" onMouseClicked="#onClear" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/icons/trash.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#cbd5e1" height="384.0" layoutX="23.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="829.0" layoutY="414.0" prefHeight="30.0" prefWidth="105.0" text="TIME">
+            <font>
+                <Font name="Impact" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="timeValue" alignment="CENTER" contentDisplay="CENTER" layoutX="827.0" layoutY="434.0" mouseTransparent="true" prefHeight="103.0" prefWidth="115.0" text="60" textAlignment="CENTER" textFill="#727272">
+            <font>
+                <Font name="Impact" size="96.0" />
+            </font>
+        </Label>
+        <Label fx:id="definitionLabel" alignment="TOP_LEFT" layoutX="32.0" layoutY="153.0" prefHeight="206.0" prefWidth="182.0" text="Definition:" wrapText="true" />
+        <Label fx:id="hintLabel" alignment="TOP_LEFT" layoutX="32.0" layoutY="370.0" prefHeight="155.0" prefWidth="182.0" text="Hint:" wrapText="true" />
+        <Rectangle fx:id="hintButton" arcHeight="30.0" arcWidth="30.0" fill="#363636" height="34.0" layoutX="61.0" layoutY="93.0" onMouseClicked="#onHint" onMousePressed="#playHint" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey4" width="115.0" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="98.0" mouseTransparent="true" prefHeight="25.0" prefWidth="92.0" text="HINT" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="197.0" layoutY="101.0" prefHeight="44.0" prefWidth="306.0" text="The hidden word is:">
+            <font>
+                <Font name="MV Boli" size="25.0" />
+            </font>
+        </Label>
+        <Label fx:id="wordLabel" layoutX="512.0" layoutY="101.0" prefHeight="44.0" prefWidth="263.0" text="...">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="309.0" layoutX="247.0" layoutY="222.0" stroke="BLACK" strokeType="INSIDE" width="509.0" />
+        <Canvas fx:id="canvas" height="309.0" layoutX="247.0" layoutY="222.0" width="509.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Canvas>
+        <Label fx:id="winLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="444.0" layoutY="492.0" prefHeight="45.0" prefWidth="115.0">
+            <font>
+                <Font name="Dubai Regular" size="30.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="predictionList" editable="false" layoutX="786.0" layoutY="172.0" prefHeight="243.0" prefWidth="200.0" styleClass="text-area" />
+        <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#ff1f1f" height="16.0" layoutX="323.0" layoutY="169.0" stroke="BLACK" strokeType="INSIDE" width="381.0" />
+        <Slider fx:id="thermometer" layoutX="314.0" layoutY="169.0" mouseTransparent="true" prefHeight="14.0" prefWidth="389.0" showTickLabels="true" showTickMarks="true" />
+        <Circle fill="#ff1f1f" layoutX="314.0" layoutY="176.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+    </children>
+</AnchorPane>

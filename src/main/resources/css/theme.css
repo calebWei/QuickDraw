@@ -1,0 +1,127 @@
+/* General all */
+.root {
+  /* -fx-background-color: #EFF0DF; */
+  -fx-focus-color: #0093ff;
+  -fx-background-image: url("/images/background1.jpg") no-repeat center center fixed;
+  -fx-background-size: cover;
+}
+
+/* General buttons */
+.button {
+  /* -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color; */
+  -fx-font-family: "JetBrains Mono";
+  -fx-font-weight: bold;
+}
+
+.button:hover {
+  -fx-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+}
+
+.button:focused {
+  /* -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color; */
+}
+
+.button:pressed {
+  -fx-color: #0068b3;
+}
+
+/* Large buttons attributes*/
+#largeButton {
+  -fx-font-size: 22px;
+}
+
+/* Small button attributes (on canvas window) */
+#smallButton {
+  -fx-font-size: 12px;
+}
+
+/* Labels */
+.label {
+  -fx-font-family: "JetBrains Mono";
+  -fx-font-weight: bold;
+  -fx-fill: #f8fafc;
+
+}
+
+.text-field {
+  -fx-font-family: "JetBrains Mono";
+  -fx-font-weight: bold;
+}
+
+.text-area, .text-area .viewport, .text-area .content {
+  -fx-background-color: transparent;
+  -fx-font-family: "JetBrains Mono";
+  -fx-font-weight: bold;
+}
+
+.rectangle {
+  -fx-fill: #7e22ce;
+  -fx-opacity: 0.95;
+  -fx-arc-width: 30px;
+  -fx-arc-height: 30px;
+}
+
+.rectangle:hover {
+  -fx-fill: #7e22ce;
+  -fx-opacity: 1;
+  -fx-arc-width: 30px;
+  -fx-arc-height: 30px;
+  -fx-scale-x: 1.1;
+  -fx-scale-y: 1.1;
+  -fx-cursor: hand;
+}
+
+.rectangle-grey {
+  -fx-fill: #1e293b;
+  -fx-opacity: 0.95;
+  -fx-arc-width: 50px;
+  -fx-arc-height: 50px;
+}
+
+.rectangle-grey2 {
+  -fx-fill: #1e293b;
+  -fx-opacity: 0.95;
+  -fx-arc-height: 30px;
+}
+
+.rectangle-grey3 {
+  -fx-fill: #f8fafc;
+  -fx-opacity: 0.95;
+  -fx-arc-width: 30px;
+  -fx-arc-height: 30px;
+}
+
+.rectangle-grey4 {
+  -fx-fill: #1e293b;
+  -fx-opacity: 0.95;
+  -fx-arc-width: 30px;
+  -fx-arc-height: 30px;
+}
+
+.rectangle-grey4:hover {
+  -fx-fill: #1e293b;
+  -fx-opacity: 1;
+  -fx-arc-width: 30px;
+  -fx-arc-height: 30px;
+  -fx-scale-x: 1.1;
+  -fx-scale-y: 1.1;
+  -fx-cursor: hand;
+}
+
+.image-view {
+
+}
+
+.image-view:hover {
+  -fx-scale-x: 1.1;
+  -fx-scale-y: 1.1;
+  -fx-cursor: hand;
+}
+
+.landing-page-main-text {
+  -fx-font-family: "JetBrains Mono";
+  -fx-font-weight: bold;
+  -fx-font-size: 40px;
+  -fx-fill: #f8fafc;
+}
+

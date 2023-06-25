@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="422.0" prefWidth="634.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.ProfileSelectionController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d0fe" height="70.0" opacity="0.95" stroke="#f0abfc" strokeType="INSIDE" strokeWidth="0.0" width="634.0" />
+        <Label alignment="CENTER" layoutX="1.0" layoutY="4.0" prefHeight="60.0" prefWidth="634.0" stylesheets="@../css/theme.css" text="Select Profile" textFill="WHITE">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#64748b" height="34.0" layoutX="50.0" layoutY="186.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey2" width="140.0" />
+      <Label fx:id="name1" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="189.0" prefHeight="27.0" prefWidth="108.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#64748b" height="34.0" layoutX="50.0" layoutY="333.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey2" width="140.0" />
+      <Label fx:id="name4" alignment="CENTER" contentDisplay="CENTER" layoutX="64.0" layoutY="336.0" prefHeight="27.0" prefWidth="108.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#64748b" height="34.0" layoutX="248.0" layoutY="186.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey2" width="140.0" />
+      <Label fx:id="name2" alignment="CENTER" contentDisplay="CENTER" layoutX="263.0" layoutY="189.0" prefHeight="27.0" prefWidth="108.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#64748b" height="34.0" layoutX="248.0" layoutY="333.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey2" width="140.0" />
+      <Label fx:id="name5" alignment="CENTER" contentDisplay="CENTER" layoutX="264.0" layoutY="336.0" prefHeight="27.0" prefWidth="108.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#64748b" height="34.0" layoutX="445.0" layoutY="186.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey2" width="140.0" />
+      <Label fx:id="name3" alignment="CENTER" contentDisplay="CENTER" layoutX="460.0" layoutY="188.0" prefHeight="27.0" prefWidth="108.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#64748b" height="34.0" layoutX="445.0" layoutY="334.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle-grey2" width="140.0" />
+      <Label fx:id="name6" alignment="CENTER" contentDisplay="CENTER" layoutX="462.0" layoutY="337.0" prefHeight="27.0" prefWidth="108.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="mainMenu" arcHeight="30.0" arcWidth="30.0" fill="#7e22ce" height="34.0" layoutX="232.0" layoutY="375.0" onMouseClicked="#onSwitchMainMenu" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+      <Label alignment="CENTER" layoutX="232.0" layoutY="375.0" mouseTransparent="true" prefHeight="34.0" prefWidth="169.0" text="Main Menu" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="user1" disable="true" fitHeight="120.0" fitWidth="120.0" layoutX="60.0" layoutY="70.0" onMouseClicked="#onClickGhost" onMousePressed="#playCharacter" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="user2" disable="true" fitHeight="120.0" fitWidth="120.0" layoutX="257.0" layoutY="70.0" onMouseClicked="#onClickCactus" onMousePressed="#playCharacter" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="user3" disable="true" fitHeight="120.0" fitWidth="120.0" layoutX="455.0" layoutY="70.0" onMouseClicked="#onClickMug" onMousePressed="#playCharacter" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="user4" disable="true" fitHeight="120.0" fitWidth="120.0" layoutX="60.0" layoutY="216.0" onMouseClicked="#onClickBulb" onMousePressed="#playCharacter" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="user5" disable="true" fitHeight="120.0" fitWidth="120.0" layoutX="260.0" layoutY="220.0" onMouseClicked="#onClickChick" onMousePressed="#playCharacter" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="user6" disable="true" fitHeight="120.0" fitWidth="120.0" layoutX="455.0" layoutY="220.0" onMouseClicked="#onClickPineapple" onMousePressed="#playCharacter" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/user6.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

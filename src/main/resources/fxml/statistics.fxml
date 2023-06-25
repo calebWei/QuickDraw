@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="422.0" prefWidth="634.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.StatisticsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d0fe" height="70.0" opacity="0.95" stroke="#f0abfc" strokeType="INSIDE" strokeWidth="0.0" width="634.0" />
+      <Label fx:id="titleLabel" alignment="CENTER" layoutY="4.0" prefHeight="70.0" prefWidth="634.0" text="Username's Statistics" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="returnButton" arcHeight="40.0" arcWidth="40.0" fill="#7e22ce" height="34.0" layoutX="232.0" layoutY="375.0" onMouseClicked="#onSwitchStart" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+      <Label alignment="CENTER" layoutX="232.0" layoutY="375.0" mouseTransparent="true" prefHeight="34.0" prefWidth="169.0" text="Return" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#e1e8f0" height="262.0" layoutX="33.0" layoutY="92.0" opacity="0.95" stroke="BLACK" strokeType="INSIDE" width="569.0" />
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#cbd5e1" height="236.0" layoutX="47.0" layoutY="105.0" opacity="0.95" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="338.0" />
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#cbd5e1" height="236.0" layoutX="397.0" layoutY="105.0" opacity="0.95" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="190.0" />
+      <Label alignment="CENTER" layoutX="53.0" layoutY="104.0" prefHeight="20.0" prefWidth="326.0" text="Statistics" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="397.0" layoutY="104.0" prefHeight="20.0" prefWidth="190.0" text="Words Encountered" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="131.0" text="General" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="151.0" text="Total Games Played:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="171.0" text="Games Won:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="191.0" text="Games Lost:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="213.0" text="Fastest Win:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="241.0" text="Streak Mode" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="292.0" text="Other" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="261.0" text="Longest Win Streak:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="312.0" text="Current Difficulty:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="wordsEncounteredLabel" alignment="TOP_LEFT" layoutX="404.0" layoutY="129.0" prefHeight="206.0" prefWidth="176.0" wrapText="true" />
+      <Label fx:id="gamesPlayedLabel" alignment="TOP_RIGHT" layoutX="191.0" layoutY="153.0" prefHeight="17.0" prefWidth="169.0" text="420 Games" />
+      <Label fx:id="gamesWonLabel" alignment="CENTER_RIGHT" layoutX="189.0" layoutY="173.0" prefHeight="17.0" prefWidth="169.0" text="69 Games" />
+      <Label fx:id="gamesLostLabel" alignment="CENTER_RIGHT" layoutX="189.0" layoutY="193.0" prefHeight="17.0" prefWidth="169.0" text="351 Games" />
+      <Label fx:id="fastestWinLabel" alignment="CENTER_RIGHT" layoutX="189.0" layoutY="215.0" prefHeight="17.0" prefWidth="169.0" text="0.265 Seconds" />
+      <Label fx:id="longestStreakLabel" alignment="CENTER_RIGHT" layoutX="189.0" layoutY="263.0" prefHeight="17.0" prefWidth="169.0" text="16 Drawings" />
+      <Rectangle fx:id="achievementButton" arcHeight="40.0" arcWidth="40.0" fill="#7e22ce" height="34.0" layoutX="441.0" layoutY="375.0" onMouseClicked="#onSwitchAchievements" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+      <Label fx:id="difficultyLabel" alignment="CENTER_RIGHT" layoutX="189.0" layoutY="314.0" prefHeight="17.0" prefWidth="169.0" text="Nightmare" />
+      <Label alignment="CENTER" layoutX="441.0" layoutY="375.0" mouseTransparent="true" prefHeight="34.0" prefWidth="169.0" text="Achievements" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

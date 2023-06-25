@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.ZenCanvasController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d0fe" height="70.0" opacity="0.95" stroke="#f0abfc" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
+        <Label alignment="CENTER" layoutY="4.0" prefHeight="60.0" prefWidth="1000.0" text="Quick Draw: Zen" textFill="WHITE">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+        <Rectangle fx:id="returnButton" arcHeight="30.0" arcWidth="30.0" fill="#7e22ce" height="34.0" layoutX="427.0" layoutY="558.0" onMouseClicked="#onSwitchStart" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+        <Label alignment="CENTER" layoutX="431.0" layoutY="563.0" mouseTransparent="true" prefHeight="23.0" prefWidth="162.0" text="Return" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#e1e8f0" height="477.0" layoutX="5.0" layoutY="76.0" opacity="0.95" stroke="BLACK" strokeType="INSIDE" width="990.0" />
+        <Label alignment="CENTER" layoutX="412.0" layoutY="91.0" prefHeight="46.0" prefWidth="200.0" text="Draw:" underline="true">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Canvas fx:id="canvas" height="309.0" layoutX="258.0" layoutY="227.0" width="509.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Canvas>
+        <Rectangle fx:id="startButton" arcHeight="30.0" arcWidth="30.0" fill="#7e22ce" height="34.0" layoutX="14.0" layoutY="558.0" onMouseClicked="#onStart" onMousePressed="#playStart" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+        <Label fx:id="startLabel" alignment="CENTER" layoutX="21.0" layoutY="564.0" mouseTransparent="true" prefHeight="23.0" prefWidth="156.0" text="Start" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Rectangle fx:id="saveButton" arcHeight="30.0" arcWidth="30.0" fill="#7e22ce" height="34.0" layoutX="817.0" layoutY="558.0" onMouseClicked="#onSave" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+        <Label alignment="CENTER" layoutX="824.0" layoutY="563.0" mouseTransparent="true" prefHeight="23.0" prefWidth="156.0" text="Save Drawing" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="wordLabel" alignment="CENTER" layoutX="257.0" layoutY="155.0" prefHeight="46.0" prefWidth="509.0" underline="true">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <Label layoutX="791.0" layoutY="204.0" mouseTransparent="true" prefHeight="25.0" prefWidth="162.0" text="Current Colour-&gt;" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="currentColour" arcHeight="20.0" arcWidth="20.0" height="20.0" layoutX="943.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Slider fx:id="thicknessSlider" blockIncrement="5.0" layoutX="801.0" layoutY="159.0" majorTickUnit="100.0" prefHeight="16.0" prefWidth="176.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+      <Label alignment="CENTER" layoutX="811.0" layoutY="137.0" mouseTransparent="true" prefHeight="25.0" prefWidth="150.0" text="Thickness" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#cbd5e1" height="267.0" layoutX="786.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+      <Label alignment="CENTER" layoutX="785.0" layoutY="275.0" prefHeight="20.0" prefWidth="200.0" text="Current Guesses" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="drawButton" fitHeight="43.0" fitWidth="38.0" layoutX="821.0" layoutY="86.0" onMouseClicked="#onErase" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/pencil.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="eraseButton" fitHeight="38.0" fitWidth="38.0" layoutX="872.0" layoutY="86.0" onMouseClicked="#onErase" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/eraser.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clearButton" fitHeight="38.0" fitWidth="38.0" layoutX="923.0" layoutY="86.0" onMouseClicked="#onClear" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons/trash.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="predictionList" editable="false" layoutX="791.0" layoutY="300.0" prefHeight="228.0" prefWidth="190.0" />
+      <Label layoutX="791.0" layoutY="239.0" mouseTransparent="true" prefHeight="25.0" prefWidth="162.0" text="Thickness-&gt;" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="currentThickness" height="20.0" layoutX="943.0" layoutY="242.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#ccd6e0" height="449.0" layoutX="21.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="219.0" />
+      <GridPane layoutX="31.0" layoutY="129.0" prefHeight="406.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Rectangle fx:id="colour0" arcHeight="20.0" arcWidth="20.0" fill="WHITESMOKE" height="18.0" onMouseClicked="#onClickColour0" stroke="BLACK" strokeType="INSIDE" width="100.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour20" arcHeight="20.0" arcWidth="20.0" fill="#d4d4d4" height="18.0" onMouseClicked="#onClickColour20" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour1" arcHeight="20.0" arcWidth="20.0" fill="#737373" height="18.0" onMouseClicked="#onClickColour1" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour21" arcHeight="20.0" arcWidth="20.0" fill="#404040" height="18.0" onMouseClicked="#onClickColour21" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour2" arcHeight="20.0" arcWidth="20.0" fill="#262626" height="18.0" onMouseClicked="#onClickColour2" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour22" arcHeight="20.0" arcWidth="20.0" fill="#171717" height="18.0" onMouseClicked="#onClickColour22" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour3" arcHeight="20.0" arcWidth="20.0" fill="#f87171" height="18.0" onMouseClicked="#onClickColour3" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour23" arcHeight="20.0" arcWidth="20.0" fill="#dc2626" height="18.0" onMouseClicked="#onClickColour23" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour4" arcHeight="20.0" arcWidth="20.0" fill="#fb923c" height="18.0" onMouseClicked="#onClickColour4" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour24" arcHeight="20.0" arcWidth="20.0" fill="#ea580c" height="18.0" onMouseClicked="#onClickColour24" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour5" arcHeight="20.0" arcWidth="20.0" fill="#fbbf24" height="18.0" onMouseClicked="#onClickColour5" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour25" arcHeight="20.0" arcWidth="20.0" fill="#d97706" height="18.0" onMouseClicked="#onClickColour25" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour6" arcHeight="20.0" arcWidth="20.0" fill="#facc15" height="18.0" onMouseClicked="#onClickColour6" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="6">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour26" arcHeight="20.0" arcWidth="20.0" fill="#ca8a04" height="18.0" onMouseClicked="#onClickColour26" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour7" arcHeight="20.0" arcWidth="20.0" fill="#a3e635" height="18.0" onMouseClicked="#onClickColour7" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour27" arcHeight="20.0" arcWidth="20.0" fill="#65a30d" height="18.0" onMouseClicked="#onClickColour27" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour8" arcHeight="20.0" arcWidth="20.0" fill="#4ade80" height="18.0" onMouseClicked="#onClickColour8" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="8">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour28" arcHeight="20.0" arcWidth="20.0" fill="#16a34a" height="18.0" onMouseClicked="#onClickColour28" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour9" arcHeight="20.0" arcWidth="20.0" fill="#34d399" height="18.0" onMouseClicked="#onClickColour9" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="9">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour29" arcHeight="20.0" arcWidth="20.0" fill="#059669" height="18.0" onMouseClicked="#onClickColour29" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour10" arcHeight="20.0" arcWidth="20.0" fill="#2dd4bf" height="18.0" onMouseClicked="#onClickColour10" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="10">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour30" arcHeight="20.0" arcWidth="20.0" fill="#0d9488" height="18.0" onMouseClicked="#onClickColour30" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour11" arcHeight="20.0" arcWidth="20.0" fill="#22d3ee" height="18.0" onMouseClicked="#onClickColour11" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="11">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour31" arcHeight="20.0" arcWidth="20.0" fill="#0891b2" height="18.0" onMouseClicked="#onClickColour31" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour13" arcHeight="20.0" arcWidth="20.0" fill="#60a5fa" height="18.0" onMouseClicked="#onClickColour13" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="13">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour32" arcHeight="20.0" arcWidth="20.0" fill="#0284c7" height="18.0" onMouseClicked="#onClickColour32" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour33" arcHeight="20.0" arcWidth="20.0" fill="#2563eb" height="18.0" onMouseClicked="#onClickColour33" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour12" arcHeight="20.0" arcWidth="20.0" fill="#38bdf8" height="18.0" onMouseClicked="#onClickColour12" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="12">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour14" arcHeight="20.0" arcWidth="20.0" fill="#818cf8" height="18.0" onMouseClicked="#onClickColour14" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="14">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour34" arcHeight="20.0" arcWidth="20.0" fill="#4f46e5" height="18.0" onMouseClicked="#onClickColour34" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour15" arcHeight="20.0" arcWidth="20.0" fill="#a78bfa" height="18.0" onMouseClicked="#onClickColour15" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="15">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour35" arcHeight="20.0" arcWidth="20.0" fill="#7c3aed" height="18.0" onMouseClicked="#onClickColour35" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="15">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour16" arcHeight="20.0" arcWidth="20.0" fill="#c084fc" height="18.0" onMouseClicked="#onClickColour16" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="16">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour36" arcHeight="20.0" arcWidth="20.0" fill="#9333ea" height="18.0" onMouseClicked="#onClickColour36" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="16">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour17" arcHeight="20.0" arcWidth="20.0" fill="#e879f9" height="18.0" onMouseClicked="#onClickColour17" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="17">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour37" arcHeight="20.0" arcWidth="20.0" fill="#c026d3" height="18.0" onMouseClicked="#onClickColour37" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="17">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour18" arcHeight="20.0" arcWidth="20.0" fill="#f472b6" height="18.0" onMouseClicked="#onClickColour18" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="18">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour38" arcHeight="20.0" arcWidth="20.0" fill="#db2777" height="18.0" onMouseClicked="#onClickColour38" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="18">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour19" arcHeight="20.0" arcWidth="20.0" fill="#fb7185" height="18.0" onMouseClicked="#onClickColour19" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.rowIndex="19">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="colour39" arcHeight="20.0" arcWidth="20.0" fill="#e11d48" height="18.0" onMouseClicked="#onClickColour39" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="1" GridPane.rowIndex="19">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="31.0" layoutY="91.0" prefHeight="34.0" prefWidth="200.0" text="Colours:" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

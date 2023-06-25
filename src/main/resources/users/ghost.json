@@ -1,0 +1,19 @@
+{
+  "username": "Nas-ty",
+  "icon": "ghost",
+  "wordHistory": [],
+  "gamesLost": 56,
+  "gamesWon": 152,
+  "bestTime": 5.5,
+  "accuracyLevel": 1,
+  "wordsLevel": 1,
+  "timeLevel": 1,
+  "confidenceLevel": 1,
+  "longestStreak": 12,
+  "gamesWonUnder30": 50,
+  "gamesWonUnder15": 23,
+  "gamesWonUnder5": 5,
+  "fiveGameStreaks": 3,
+  "tenGameStreaks": 2,
+  "fifteenGameStreaks": 1
+}

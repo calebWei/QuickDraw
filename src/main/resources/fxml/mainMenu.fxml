@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="422.0" prefWidth="634.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.MainMenuController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d0fe" height="70.0" opacity="0.95" stroke="#f0abfc" strokeType="INSIDE" strokeWidth="0.0" width="634.0" />
+      <Label layoutX="196.0" layoutY="4.0" text="Main Menu" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="profile" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="77.0" layoutX="78.0" layoutY="187.0" onMouseClicked="#onSwitchSelectProfile" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="212.0" />
+      <Rectangle fx:id="register" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="77.0" layoutX="344.0" layoutY="187.0" onMouseClicked="#onSwitchNew" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="212.0" />
+      <Label alignment="CENTER" layoutX="344.0" layoutY="213.0" mouseTransparent="true" prefHeight="23.0" prefWidth="212.0" stylesheets="@../css/theme.css" text="New Account" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="78.0" layoutY="213.0" mouseTransparent="true" prefHeight="23.0" prefWidth="212.0" stylesheets="@../css/theme.css" text="Select Profile" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

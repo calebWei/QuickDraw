@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="422.0" prefWidth="634.0" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.GameModeController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d0fe" height="70.0" opacity="0.95" stroke="#f0abfc" strokeType="INSIDE" strokeWidth="0.0" width="634.0" />
+        <Label alignment="CENTER" layoutX="-1.0" layoutY="4.0" prefHeight="70.0" prefWidth="634.0" text="Choose Game Mode" textFill="WHITE">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+        <Rectangle fx:id="classicButton" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="87.0" layoutX="47.0" layoutY="106.0" onMouseClicked="#onSwitchClassic" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="241.0" />
+        <Label alignment="CENTER" layoutX="48.0" layoutY="136.0" mouseTransparent="true" prefHeight="23.0" prefWidth="241.0" text="Classic Mode" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Rectangle fx:id="returnButton" arcHeight="40.0" arcWidth="40.0" fill="#7e22ce" height="34.0" layoutX="232.0" layoutY="375.0" onMouseClicked="#onSwitchStart" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="169.0" />
+        <Label alignment="CENTER" layoutX="232.0" layoutY="375.0" mouseTransparent="true" prefHeight="34.0" prefWidth="169.0" text="Return" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+      <Rectangle fx:id="classicButton1" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="87.0" layoutX="347.0" layoutY="106.0" onMouseClicked="#onSwitchZen" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="241.0" />
+      <Label alignment="CENTER" layoutX="347.0" layoutY="136.0" mouseTransparent="true" prefHeight="23.0" prefWidth="241.0" text="Zen Mode" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="classicButton2" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="87.0" layoutX="47.0" layoutY="241.0" onMouseClicked="#onSwitchHidden" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="241.0" />
+      <Label alignment="CENTER" layoutX="47.0" layoutY="271.0" mouseTransparent="true" prefHeight="23.0" prefWidth="241.0" text="Hidden Word Mode" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="classicButton3" arcHeight="50.0" arcWidth="50.0" fill="#7e22ce" height="87.0" layoutX="347.0" layoutY="241.0" onMouseClicked="#onSwitchStreak" onMousePressed="#playPop" opacity="0.74" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle" width="241.0" />
+      <Label alignment="CENTER" layoutX="347.0" layoutY="273.0" mouseTransparent="true" prefHeight="23.0" prefWidth="241.0" text="Streak Mode" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

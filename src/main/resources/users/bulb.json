@@ -1,0 +1,19 @@
+{
+  "username": "mr-V",
+  "icon": "bulb",
+  "wordHistory": [],
+  "gamesLost": 12,
+  "gamesWon": 5,
+  "bestTime": 12.4,
+  "accuracyLevel": 1,
+  "wordsLevel": 1,
+  "timeLevel": 1,
+  "confidenceLevel": 1,
+  "longestStreak": 5,
+  "gamesWonUnder30": 3,
+  "gamesWonUnder15": 2,
+  "gamesWonUnder5": 2,
+  "fiveGameStreaks": 1,
+  "tenGameStreaks": 0,
+  "fifteenGameStreaks": 0
+}
